@@ -109,13 +109,15 @@ export default function ContentSection() {
               </p>
             </div>
 
-            <Button
-              className="w-full h-12 text-base md:text-lg font-bold mb-3"
-              size="lg"
-              data-testid="button-get-access"
-            >
-              GET INSTANT ACCESS NOW
-            </Button>
+            <a href="https://pay.hotmart.com/S105820523S?checkoutMode=10" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="w-full h-12 text-base md:text-lg font-bold mb-3"
+                size="lg"
+                data-testid="button-get-access"
+              >
+                GET INSTANT ACCESS NOW
+              </Button>
+            </a>
 
             <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
               <div className="flex items-center gap-1">
