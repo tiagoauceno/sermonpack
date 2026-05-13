@@ -3,20 +3,24 @@ import { Shield, Check } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Necesito experiencia previa?",
-    answer: "No, es ideal para principiantes."
+    question: "Do I need previous experience?",
+    answer: "No, it's perfect for beginners."
   },
   {
-    question: "¿Es un pago único?",
-    answer: "Sí. Sin mensualidades ni suscripciones."
+    question: "Is it a one-time payment?",
+    answer: "Yes. No subscriptions."
   },
   {
-    question: "¿Cómo recibo el material?",
-    answer: "Por email, al instante."
+    question: "How do I receive the material?",
+    answer: "By email, in PDF format."
   },
   {
-    question: "¿Puedo imprimir las clases?",
-    answer: "Claro, el PDF está diseñado para eso."
+    question: "Can I access it from my phone?",
+    answer: "Yes, from any device."
+  },
+  {
+    question: "When will I get access?",
+    answer: "Right after your purchase."
   }
 ];
 
@@ -33,14 +37,18 @@ export default function GuaranteeSection() {
               
               <div className="flex-1">
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-green-800 dark:text-green-300 mb-2">
-                  Garantía Incondicional de 7 Días
+                  Try It Risk-Free — 7-Day Guarantee
                 </h2>
                 <p className="text-green-700 dark:text-green-400 leading-relaxed">
-                  Si por algún motivo no quedas satisfecho con el material, te devolvemos el 100% de tu inversión sin preguntas. Sin burocracia, sin justificaciones.
+                  If you don't love the material, we'll refund 100% of your money. Simple and fair. No questions asked.
                 </p>
               </div>
             </div>
           </Card>
+
+          <div className="text-center mb-4">
+            <h3 className="font-serif text-2xl font-semibold text-primary">Quick FAQ</h3>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {faqs.map((faq, index) => (

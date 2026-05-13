@@ -3,16 +3,16 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Carlos M.",
-    quote: "Compré y usé 3 clases el mismo día. ¡Súper fácil!"
+    name: "Sandra Alves, Women's Ministry Leader",
+    quote: "I used to struggle preparing messages and felt nervous teaching. Now I feel more prepared and confident every time I share."
   },
   {
-    name: "Lucía P.",
-    quote: "Las clases están claras, estructuradas y mis alumnos avanzan con más seguridad."
+    name: "Pastor Carolina Mendez",
+    quote: "I shared three outlines in my small group and the women were truly touched. The messages are clear, biblical and easy to follow."
   },
   {
-    name: "Renan T.",
-    quote: "¡Por primera vez pude dar clase sin estrés ni improvisación!"
+    name: "Patricia Rojas, Ministry Leader",
+    quote: "For the first time, I can prepare a message without feeling lost. The outlines are organized, simple and fully Bible-based."
   }
 ];
 
@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
-            Testimonios de Quienes Ya Usan el PACK
+            Testimonials From Women Already Using the PACK
           </h2>
         </div>
         
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
                 </p>
                 
                 <p className="font-semibold text-foreground">
-                  {testimonial.name}
+                  — {testimonial.name}
                 </p>
               </div>
             </Card>

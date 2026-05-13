@@ -4,47 +4,47 @@ import { CheckCircle2, Lock, Mail, Shield, Infinity, Sparkles } from "lucide-rea
 
 const items = [
   {
-    title: "Apostilla en PDF con 50 Clases de Canto",
-    value: "$39.90",
+    title: "PDF with 500 Sermon Outlines for Women",
+    value: "$47.00",
     icon: CheckCircle2
   },
   {
-    title: "Bono: Apostilla de Ejercicios Vocales",
+    title: "50 Sermon Outlines on the Power of a Praying Woman",
+    value: "$12.90",
+    icon: CheckCircle2
+  },
+  {
+    title: "50 Sermon Outlines on Women of the Bible",
+    value: "$12.90",
+    icon: CheckCircle2
+  },
+  {
+    title: "Complete Bible Overview in 50 Simple Outlines",
     value: "$9.90",
     icon: CheckCircle2
   },
   {
-    title: "Bono: Manual de Calentamiento Vocal",
+    title: "50 Sermon Outlines on the Parables of Jesus",
+    value: "$9.90",
+    icon: CheckCircle2
+  },
+  {
+    title: "Practical Guide to Fasting and Prayer",
     value: "$7.90",
     icon: CheckCircle2
   },
   {
-    title: "Bono: Guía de Organización Semanal",
-    value: "$5.90",
-    icon: CheckCircle2
-  },
-  {
-    title: "Bono: Ficha de Progreso del Alumno",
-    value: "$6.90",
-    icon: CheckCircle2
-  },
-  {
-    title: "Bono: Guía para Grabar con Celular",
-    value: "$8.90",
-    icon: CheckCircle2
-  },
-  {
-    title: "Garantía de 7 Días",
+    title: "7-Day Money-Back Guarantee",
     value: null,
     icon: Shield
   },
   {
-    title: "Acceso Vitalicio",
+    title: "Lifetime Access",
     value: null,
     icon: Infinity
   },
   {
-    title: "Actualizaciones Gratuitas",
+    title: "Free Updates",
     value: null,
     icon: Sparkles
   }
@@ -56,21 +56,12 @@ export default function ContentSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
-            Recapitulando todo lo que vas a recibir además de la <span className="text-accent">Apostilla en PDF con 50 Clases de Canto Estructuradas</span>
+            Here's Everything You're Getting Today:
           </h2>
         </div>
 
         <div className="max-w-2xl mx-auto">
           <Card className="p-6 md:p-8 border-2 border-blue-900 dark:border-blue-800">
-            <div className="flex justify-center mb-6">
-              <img 
-                src="https://i.imgur.com/pshYprB.png" 
-                alt="Apostilla en PDF con 50 Clases de Canto" 
-                className="max-w-full h-auto rounded-md"
-                data-testid="img-product-preview"
-              />
-            </div>
-
             <div className="space-y-4 mb-8">
               {items.map((item, index) => (
                 <div 
@@ -86,7 +77,7 @@ export default function ContentSection() {
                   </div>
                   {item.value && (
                     <p className="text-sm font-bold text-red-600 dark:text-red-500 line-through mt-1 ml-7">
-                      VALORADO EN {item.value}
+                      VALUED AT {item.value}
                     </p>
                   )}
                 </div>
@@ -95,16 +86,16 @@ export default function ContentSection() {
 
             <div className="pt-4 mb-6">
               <p className="text-center text-lg md:text-xl text-red-600 dark:text-red-500 line-through mb-2">
-                DE $79.40
+                REGULAR VALUE: $100.50
               </p>
               <p className="text-center text-xl md:text-2xl font-semibold text-foreground mb-1">
-                Hoy tendrás acceso completo a TODO esto por solo
+                Today you get full access to EVERYTHING for only
               </p>
               <p className="text-center text-3xl md:text-4xl font-bold text-green-600 dark:text-green-500 mb-3">
                 $9.90 USD
               </p>
               <p className="text-center text-sm text-muted-foreground mb-6">
-                (Puedes pagar en tu moneda local)
+                (You can pay in your local currency)
               </p>
             </div>
 
@@ -113,18 +104,18 @@ export default function ContentSection() {
               size="lg"
               data-testid="button-get-access"
             >
-              QUIERO MI ACCESO AHORA
+              GET INSTANT ACCESS NOW
             </Button>
 
             <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Lock className="w-4 h-4" />
-                <span>Pago 100% Seguro</span>
+                <span>100% Secure Payment</span>
               </div>
               <span>|</span>
               <div className="flex items-center gap-1">
                 <Mail className="w-4 h-4" />
-                <span>Acceso inmediato por email</span>
+                <span>Instant Email Delivery</span>
               </div>
             </div>
           </Card>

@@ -1,31 +1,31 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mic2, Wind, Music2, Drama, Lightbulb, Users } from "lucide-react";
+import { Heart, Sparkles, Crown, Trophy, Users, Star } from "lucide-react";
 
 const topics = [
   {
-    icon: Mic2,
-    title: "Técnica Vocal"
+    icon: Heart,
+    title: "Messages for Women Walking Through Struggles"
   },
   {
-    icon: Wind,
-    title: "Respiración y Proyección"
+    icon: Sparkles,
+    title: "Sermons on Healing and Restoration"
   },
   {
-    icon: Music2,
-    title: "Afinación y Ritmo"
+    icon: Crown,
+    title: "Outlines on Identity in Christ"
   },
   {
-    icon: Drama,
-    title: "Interpretación y Expresión"
-  },
-  {
-    icon: Lightbulb,
-    title: "Ejercicios Creativos"
+    icon: Trophy,
+    title: "Messages on Freedom and Victory"
   },
   {
     icon: Users,
-    title: "Dinámicas Grupales"
+    title: "Sermon Outlines for Small Groups"
+  },
+  {
+    icon: Star,
+    title: "Messages for Women's Ministry Events"
   }
 ];
 
@@ -39,7 +39,7 @@ export default function ShowcaseSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto space-y-4">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary">
-            Lo Que Vas a Enseñar
+            Topics You'll Find Inside
           </h2>
           
           <Card className="p-6 max-w-3xl mx-auto">
@@ -63,7 +63,7 @@ export default function ShowcaseSection() {
             data-testid="button-cta"
             className="bg-primary hover:bg-primary text-primary-foreground border-2 border-primary-border font-bold text-lg px-8"
           >
-            QUIERO GARANTIZAR AHORA
+            GET MY SERMON PACK NOW
           </Button>
         </div>
       </div>

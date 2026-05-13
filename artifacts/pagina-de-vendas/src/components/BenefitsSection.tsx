@@ -1,20 +1,20 @@
-import { GraduationCap, FileCheck, Users } from "lucide-react";
+import { BookMarked, Clock, Users } from "lucide-react";
 
 const benefits = [
   {
-    icon: GraduationCap,
-    title: "Clases del Nivel Básico al Avanzado",
-    description: "Todas las clases organizadas paso a paso para enseñar desde principiantes hasta cantantes avanzados"
+    icon: BookMarked,
+    title: "500 Sermon Outlines Rooted in God's Word",
+    description: "Every outline is carefully structured to help you prepare faster and share God's Word with more clarity, no matter how much experience you have"
   },
   {
-    icon: FileCheck,
-    title: "Método Claro, Sin Complicaciones",
-    description: "No necesitas pasar horas planificando: abre el PDF y enseña con seguridad"
+    icon: Clock,
+    title: "A Ready-to-Preach System That Saves You Hours",
+    description: "No more spending the whole week trying to organize your thoughts. Open the PDF, choose a topic, and prepare your message with confidence"
   },
   {
     icon: Users,
-    title: "Adaptable a Todas las Edades",
-    description: "Diseñado para niños, adolescentes y adultos. Úsalo en clases individuales o grupales"
+    title: "Made for Every Woman Who Teaches God's Word",
+    description: "Perfect for women's ministry leaders, small group leaders, Sunday school teachers, Bible teachers, and Christian women starting their preaching journey"
   }
 ];
 
@@ -24,7 +24,7 @@ export default function BenefitsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
-            El Secreto Está en la Estructura
+            The Power Is in a Prepared Message
           </h2>
         </div>
         

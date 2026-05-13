@@ -1,38 +1,30 @@
-import { GraduationCap, Award, UserCheck, School, Users, Baby, Clock, BookOpen } from "lucide-react";
+import { HelpCircle, Clock, Heart, Sprout, Mic2, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const audiences = [
   {
-    icon: GraduationCap,
-    title: "Profesores Principiantes"
-  },
-  {
-    icon: Award,
-    title: "Profesores Experimentados"
-  },
-  {
-    icon: UserCheck,
-    title: "Profesores Autónomos"
-  },
-  {
-    icon: School,
-    title: "Escuelas de Música Nuevas"
-  },
-  {
-    icon: Users,
-    title: "Profesores Particulares"
-  },
-  {
-    icon: Baby,
-    title: "Profesores que Enseñan a Niños y Adultos"
+    icon: HelpCircle,
+    title: "You feel unsure when preparing a message"
   },
   {
     icon: Clock,
-    title: "Profesionales con Poco Tiempo para Planificar"
+    title: "You don't have time to study from scratch"
+  },
+  {
+    icon: Heart,
+    title: "You worry your message won't truly reach the hearts of those listening"
+  },
+  {
+    icon: Sprout,
+    title: "You're just starting and need a clear structure"
+  },
+  {
+    icon: Mic2,
+    title: "You already minister and want stronger messages"
   },
   {
     icon: BookOpen,
-    title: "Profesores que Quieren Mejorar su Didáctica"
+    title: "You want to share God's Word with more clarity"
   }
 ];
 
@@ -46,12 +38,12 @@ export default function TargetAudienceSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
-            Este PACK es para ti:
+            This PACK Is for You If:
           </h2>
         </div>
         
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {audiences.map((audience, index) => (
               <div 
                 key={index}
@@ -78,7 +70,7 @@ export default function TargetAudienceSection() {
             data-testid="button-cta"
             className="bg-primary hover:bg-primary text-primary-foreground border-2 border-primary-border font-bold text-lg px-8"
           >
-            QUIERO GARANTIZAR AHORA
+            GET MY SERMON PACK NOW
           </Button>
         </div>
       </div>

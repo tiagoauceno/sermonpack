@@ -1,47 +1,47 @@
 import { Card } from "@/components/ui/card";
-import { FileText, Mic, Wind, Calendar, Users, Camera } from "lucide-react";
+import { BookOpen, BookHeart, BookMarked, Globe, BookText, Flame } from "lucide-react";
 
 const items = [
   {
-    icon: FileText,
-    title: "Apostila en PDF con 50 Clases de Canto",
-    description: "Cada clase está cuidadosamente diseñada para desarrollar habilidades vocales de forma clara y progresiva",
-    oldPrice: "$39.90"
+    icon: BookOpen,
+    title: "Complete PDF with 500 Sermon Outlines for Women",
+    description: "Every outline includes the theme, Bible text, introduction, main points and a ready-to-share conclusion",
+    oldPrice: "$47.00"
   },
   {
-    icon: Mic,
-    title: "BONO #1: Apostilla de Ejercicios Vocales Básicos",
-    description: "Para comenzar cada clase con seguridad y técnica",
+    icon: BookHeart,
+    title: "BONUS #1: 50 Sermon Outlines on the Power of a Praying Woman",
+    description: "Deep, Bible-based messages on the spiritual strength of women who stand firm in prayer",
+    oldPrice: "$12.90",
+    newPrice: "FREE TODAY"
+  },
+  {
+    icon: BookMarked,
+    title: "BONUS #2: 50 Sermon Outlines on Women of the Bible",
+    description: "Inspiring messages based on real stories of women who shaped God's Kingdom",
+    oldPrice: "$12.90",
+    newPrice: "FREE TODAY"
+  },
+  {
+    icon: Globe,
+    title: "BONUS #3: Complete Bible Overview in 50 Simple Outlines",
+    description: "Study the whole Bible in a simple way and teach with more confidence and depth",
     oldPrice: "$9.90",
-    newPrice: "HOY GRATIS"
+    newPrice: "FREE TODAY"
   },
   {
-    icon: Wind,
-    title: "BONO #2: Manual de Calentamiento Vocal para Profesores",
-    description: "Evita tensiones y mejora la calidad vocal con rutinas efectivas",
+    icon: BookText,
+    title: "BONUS #4: 50 Sermon Outlines on the Parables of Jesus",
+    description: "Each parable explained step by step so you can preach with clarity and meaning",
+    oldPrice: "$9.90",
+    newPrice: "FREE TODAY"
+  },
+  {
+    icon: Flame,
+    title: "BONUS #5: Practical Guide to Fasting and Prayer",
+    description: "A complete guide created to support your spiritual life and ministry preparation",
     oldPrice: "$7.90",
-    newPrice: "HOY GRATIS"
-  },
-  {
-    icon: Calendar,
-    title: "BONO #3: Guía de Organización de Clases Semanales",
-    description: "Planifica toda tu semana de clases en minutos",
-    oldPrice: "$5.90",
-    newPrice: "HOY GRATIS"
-  },
-  {
-    icon: Users,
-    title: "BONO #4: Ficha de Seguimiento de Progreso del Alumno",
-    description: "Controla el avance de cada estudiante con facilidad",
-    oldPrice: "$6.90",
-    newPrice: "HOY GRATIS"
-  },
-  {
-    icon: Camera,
-    title: "BONO #5: Mini Guía para Grabar Ejercicios con tu Celular",
-    description: "Graba tu voz o ejercicios con calidad sin equipos caros",
-    oldPrice: "$8.90",
-    newPrice: "HOY GRATIS"
+    newPrice: "FREE TODAY"
   }
 ];
 
@@ -51,7 +51,7 @@ export default function WhatYouReceiveSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
-            ¿Qué Vas a Recibir?
+            What You'll Receive
           </h2>
         </div>
         
@@ -78,7 +78,7 @@ export default function WhatYouReceiveSection() {
                     )}
                     {item.oldPrice && (
                       <div className="space-y-1">
-                        <div className="text-sm text-red-600 line-through font-semibold">VALORADO EN {item.oldPrice}</div>
+                        <div className="text-sm text-red-600 line-through font-semibold">VALUED AT {item.oldPrice}</div>
                         {item.newPrice && (
                           <div className="text-sm font-bold text-green-600">{item.newPrice}</div>
                         )}
