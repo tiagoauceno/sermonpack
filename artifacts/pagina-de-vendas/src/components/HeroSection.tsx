@@ -6,7 +6,7 @@ import slide2 from "@assets/5_1778703886436.webp";
 import slide3 from "@assets/1_1778703931409.webp";
 import slide4 from "@assets/2_1778704000882.webp";
 import slide5 from "@assets/3_1778704035047.webp";
-import slide6 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0050_1777681688453.jpg";
+import slide6 from "@assets/4_1778704065774.webp";
 
 const slides = [
   { src: slide1, alt: "500 Ready-to-Preach Sermon Outlines - Cover" },
