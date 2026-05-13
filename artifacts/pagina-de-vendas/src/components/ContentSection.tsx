@@ -62,9 +62,18 @@ export default function ContentSection() {
 
         <div className="max-w-2xl mx-auto">
           <Card className="p-6 md:p-8 border-2 border-blue-900 dark:border-blue-800">
+            <div className="flex justify-center mb-6">
+              <img
+                src="https://i.imgur.com/pshYprB.png"
+                alt="500 Sermon Outlines for Women"
+                className="max-w-full h-auto rounded-md"
+                data-testid="img-product-preview"
+              />
+            </div>
+
             <div className="space-y-4 mb-8">
               {items.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="text-left"
                   data-testid={`item-deliverable-${index}`}
@@ -99,7 +108,7 @@ export default function ContentSection() {
               </p>
             </div>
 
-            <Button 
+            <Button
               className="w-full h-12 text-base md:text-lg font-bold mb-3"
               size="lg"
               data-testid="button-get-access"

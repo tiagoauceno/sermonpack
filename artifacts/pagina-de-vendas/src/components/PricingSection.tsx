@@ -38,8 +38,17 @@ export default function PricingSection() {
             Here's Everything You're Getting Today
           </h2>
         </div>
-        
+
         <div className="max-w-3xl mx-auto mb-6">
+          <div className="flex justify-center mb-6">
+            <img
+              src="https://i.imgur.com/pshYprB.png"
+              alt="500 Sermon Outlines Pack"
+              className="w-full max-w-xs h-auto rounded-md shadow-lg"
+              data-testid="img-pricing-preview"
+            />
+          </div>
+
           <Card className="p-6">
             <div className="space-y-4">
               {features.map((feature, index) => (
@@ -52,21 +61,21 @@ export default function PricingSection() {
                   </div>
                 </div>
               ))}
-              
+
               <div className="flex items-start justify-between gap-4 pb-3 border-b">
                 <div className="flex items-start gap-3 flex-1">
                   <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span className="text-foreground font-semibold text-sm">7-Day Money-Back Guarantee</span>
                 </div>
               </div>
-              
+
               <div className="flex items-start justify-between gap-4 pb-3 border-b">
                 <div className="flex items-start gap-3 flex-1">
                   <Infinity className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span className="text-foreground font-semibold text-sm">Lifetime Access</span>
                 </div>
               </div>
-              
+
               <div className="flex items-start justify-between gap-4 pb-6">
                 <div className="flex items-start gap-3 flex-1">
                   <Sparkles className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -76,7 +85,7 @@ export default function PricingSection() {
             </div>
           </Card>
         </div>
-        
+
         <div className="max-w-2xl mx-auto mt-8">
           <Card className="p-8 shadow-2xl border-2 border-blue-900 dark:border-blue-800">
             <div className="text-center space-y-6">
@@ -86,15 +95,15 @@ export default function PricingSection() {
                 <p className="text-5xl font-bold text-green-600 dark:text-green-500 mb-2">$9.90 USD</p>
                 <p className="text-sm text-muted-foreground">(You can pay in your local currency)</p>
               </div>
-              
-              <Button 
+
+              <Button
                 size="lg"
                 className="w-full bg-primary hover:bg-primary text-primary-foreground border-2 border-primary-border text-xl py-8 font-bold shadow-lg"
                 data-testid="button-pricing-cta"
               >
                 GET MY SERMON PACK NOW
               </Button>
-              
+
               <div className="text-center text-sm text-muted-foreground">
                 <p>100% Secure Payment | Instant Email Delivery | 7-Day Guarantee</p>
               </div>
