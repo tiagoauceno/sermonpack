@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Página de Vendas - Clases de Canto"
+version = "1.0.0"
+id = "artifacts/pagina-de-vendas"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24976
+
+[services.development]
+run = "pnpm --filter @workspace/pagina-de-vendas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pagina-de-vendas", "run", "build" ]
+publicDir = "artifacts/pagina-de-vendas/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24976"
+BASE_PATH = "/"
