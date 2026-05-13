@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Lock, Mail, Shield, Infinity, Sparkles } from "lucide-react";
+import productImage from "@assets/MKP_1778697922694.webp";
 
 const items = [
   {
@@ -64,7 +65,7 @@ export default function ContentSection() {
           <Card className="p-6 md:p-8 border-2 border-blue-900 dark:border-blue-800">
             <div className="flex justify-center mb-6">
               <img
-                src="https://i.imgur.com/pshYprB.png"
+                src={productImage}
                 alt="500 Sermon Outlines for Women"
                 className="max-w-full h-auto rounded-md"
                 data-testid="img-product-preview"
