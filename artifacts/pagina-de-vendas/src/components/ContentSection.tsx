@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Lock, Mail, Shield, Infinity, Sparkles } from "lucide-react";
 import productImage from "@assets/MKP_1778697922694.webp";
+import { useUtmLink } from "@/lib/useUtmLink";
 
 const items = [
   {
@@ -51,7 +52,10 @@ const items = [
   }
 ];
 
+const HOTMART_URL = "https://pay.hotmart.com/S105820523S?checkoutMode=10";
+
 export default function ContentSection() {
+  const checkoutLink = useUtmLink(HOTMART_URL);
   return (
     <section className="py-8 md:py-12 bg-background" id="content">
       <div className="container mx-auto px-4">
@@ -109,7 +113,7 @@ export default function ContentSection() {
               </p>
             </div>
 
-            <a href="https://pay.hotmart.com/S105820523S?checkoutMode=10" target="_blank" rel="noopener noreferrer">
+            <a href={checkoutLink} target="_blank" rel="noopener noreferrer">
               <Button
                 className="w-full h-12 text-base md:text-lg font-bold mb-3"
                 size="lg"
