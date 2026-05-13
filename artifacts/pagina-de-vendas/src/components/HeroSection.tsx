@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import slide1 from "@assets/apostila_50_clases_canto_sem_bordas_1777682549827.jpg";
+import slide1 from "@assets/Design_sem_nome_(8)_1778697160181.webp";
 import slide2 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0019_1777681688451.jpg";
 import slide3 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0025_1777681688451.jpg";
 import slide4 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0030_1777681688452.jpg";
