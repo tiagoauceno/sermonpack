@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import slide1 from "@assets/Design_sem_nome_(8)_1778697160181.webp";
 import slide2 from "@assets/5_1778703886436.webp";
 import slide3 from "@assets/1_1778703931409.webp";
-import slide4 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0030_1777681688452.jpg";
+import slide4 from "@assets/2_1778704000882.webp";
 import slide5 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0032_1777681688452.jpg";
 import slide6 from "@assets/Apostilla_en_PDF_con_50_Clases_de_Canto_page-0050_1777681688453.jpg";
 
