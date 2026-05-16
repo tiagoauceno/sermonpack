@@ -1,0 +1,96 @@
+Preciso corrigir o deploy da Vercel porque o site abriu mostrando código JavaScript na tela em vez da página.
+
+Problema:
+A Vercel publicou um arquivo JavaScript de servidor/bundle, não o index.html da página.
+O domínio também aparece como sermonpack-api-server, indicando que ela pode estar usando o projeto/pasta errada.
+
+Objetivo:
+A Vercel precisa publicar apenas a página estática da pasta:
+artifacts/pagina-de-vendas
+
+E o arquivo final servido precisa ser:
+dist/index.html
+
+Não pode publicar api-server, server bundle, backend ou arquivo JS direto.
+
+Faça exatamente:
+
+1. Verifique a estrutura do projeto.
+A página correta está em:
+artifacts/pagina-de-vendas
+
+2. Confirme que o build correto da página é:
+pnpm --dir artifacts/pagina-de-vendas run build:vercel
+
+3. Confirme que esse build gera:
+artifacts/pagina-de-vendas/dist/index.html
+artifacts/pagina-de-vendas/dist/assets
+
+4. Ajuste o package.json da raiz para o script build ficar exatamente assim:
+
+"build": "pnpm --dir artifacts/pagina-de-vendas run build:vercel && rm -rf dist && cp -r artifacts/pagina-de-vendas/dist ./dist"
+
+5. Depois do build, a raiz precisa ter:
+dist/index.html
+dist/assets
+
+6. Ajuste o vercel.json da raiz para ficar exatamente assim:
+
+{
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
+7. Garanta que nenhum build de api-server/backend está sendo usado pela Vercel.
+
+8. Verifique se não existe outro vercel.json dentro de:
+artifacts/api-server
+apps/api-server
+server
+api
+backend
+
+Se existir e estiver interferindo, não use ele para o deploy da página.
+
+9. Rode na raiz:
+
+pnpm install --no-frozen-lockfile
+pnpm run build
+
+10. Depois confirme que o arquivo:
+dist/index.html
+
+é realmente HTML da página, e não código JavaScript.
+
+11. Não altere:
+visual
+copy
+layout
+imagens
+cores
+botões
+links
+UTMs
+
+12. Faça commit e push:
+
+git add .
+git commit -m "fix vercel static frontend deploy"
+git push origin main
+
+13. No final me diga:
+
+Build passou: sim ou não
+dist/index.html existe na raiz: sim ou não
+dist/index.html é HTML da página: sim ou não
+A Vercel vai publicar apenas o frontend: sim ou não
+Novo commit enviado:
+Pronto para redeploy: sim ou não
