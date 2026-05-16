@@ -1,0 +1,154 @@
+# 🚀 PROMPT DEFINITIVO - PREPARAR PROJETO PARA DEPLOY
+# Cole este prompt no AI Studio (Google Gemini)
+
+---
+
+Analise este projeto React/Vite completamente e prepare-o para deploy na Vercel/Netlify.
+
+EXECUTAR AUTOMATICAMENTE (SEM PERGUNTAR):
+
+## 1️⃣ CORREÇÕES CRÍTICAS DE DEPLOY
+
+### Estrutura de Arquivos:
+- ✅ Mover TODOS os arquivos .tsx/.ts/.jsx/.js para pasta `src/`
+- ✅ Manter apenas index.html, package.json, vite.config.ts, tsconfig.json na raiz
+- ✅ Criar pasta `src/components/` e mover todos componentes
+- ✅ Criar pasta `src/services/` se houver integrações de API
+- ✅ Atualizar TODOS os imports para refletir nova estrutura
+
+### index.html:
+- ❌ REMOVER `<script type="importmap">` (quebra build de produção)
+- ❌ REMOVER links para CSS inexistentes
+- ❌ REMOVER scripts duplicados do React/Vite
+- ✅ Manter apenas: `<script type="module" src="/src/index.tsx"></script>`
+- ✅ Garantir que CDNs (Tailwind, fontes) usam HTTPS
+
+### vite.config.ts:
+- ✅ Configurar corretamente:
+```typescript
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+export default defineConfig({
+  base: '/',
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false
+  }
+});
+```
+
+### Variáveis de Ambiente:
+- ❌ SUBSTITUIR `process.env` por `import.meta.env`
+- ✅ Todas variáveis devem começar com `VITE_`
+- ✅ Criar arquivo `.env.example` com template
+- ✅ Exemplo: `VITE_API_KEY=sua_chave_aqui`
+
+### package.json:
+- ✅ Verificar se tem scripts corretos:
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
+```
+- ✅ Garantir que todas dependências estão listadas
+
+## 2️⃣ OTIMIZAÇÃO DE CÓDIGO
+
+### Componentes:
+- ✅ Quebrar componentes com 250+ linhas em componentes menores
+- ✅ Extrair lógica repetida para hooks customizados
+- ✅ Criar componentes reutilizáveis para código duplicado
+- ✅ Simplificar JSX profundamente aninhado
+
+### Performance:
+- ✅ Adicionar React.memo em componentes pesados
+- ✅ Usar useMemo/useCallback onde apropriado
+- ✅ Lazy load de componentes grandes
+
+### Qualidade:
+- ✅ Aplicar princípio DRY (Don't Repeat Yourself)
+- ✅ Remover console.log desnecessários
+- ✅ Corrigir imports não utilizados
+- ✅ Padronizar nomenclatura
+
+## 3️⃣ ARQUIVOS DE CONFIGURAÇÃO DE DEPLOY
+
+### Criar vercel.json:
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "installCommand": "npm install"
+}
+```
+
+### Criar netlify.toml:
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+### Criar/Atualizar .gitignore:
+```
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+```
+
+## 4️⃣ CHECKLIST FINAL
+
+Verificar que NÃO existem:
+- ❌ Scripts duplicados no HTML
+- ❌ Import maps no HTML
+- ❌ Referências a arquivos inexistentes
+- ❌ process.env (usar import.meta.env)
+- ❌ Arquivos fora da pasta src/
+- ❌ Dependências faltando no package.json
+
+Garantir que existem:
+- ✅ Pasta src/ com todos os arquivos
+- ✅ index.html limpo na raiz
+- ✅ vite.config.ts configurado
+- ✅ .env.example para referência
+- ✅ vercel.json e netlify.toml
+- ✅ .gitignore atualizado
+
+## 5️⃣ SAÍDA ESPERADA
+
+ENTREGAR:
+1. **Projeto completo refatorado** pronto para download
+2. **Lista de mudanças** realizadas
+3. **Instruções de deploy** em 3 passos:
+   - Push para GitHub
+   - Conectar na Vercel/Netlify
+   - Adicionar variáveis de ambiente (se necessário)
+
+IMPORTANTE:
+- ⚠️ Manter 100% da funcionalidade original
+- ⚠️ Preservar design e comportamento
+- ⚠️ Código deve funcionar IMEDIATAMENTE após deploy
+
+---
+
+EXECUTAR TODAS AS CORREÇÕES AUTOMATICAMENTE E ENTREGAR O PROJETO PRONTO!
