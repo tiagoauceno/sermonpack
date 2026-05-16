@@ -1,0 +1,140 @@
+Preciso que você corrija definitivamente o deploy deste projeto na Vercel.
+
+Contexto:
+O build agora passa com sucesso, mas a Vercel dá erro porque não encontra a pasta dist no lugar certo.
+
+Erro atual da Vercel:
+Error: No Output Directory named "dist" found after the Build completed.
+
+O log mostra que o build passa:
+✓ built in 3.34s
+
+Mas a Vercel está procurando a pasta dist no lugar errado.
+
+A página principal está em:
+artifacts/pagina-de-vendas
+
+O build roda dentro dessa pasta:
+artifacts/pagina-de-vendas
+
+E gera a pasta:
+artifacts/pagina-de-vendas/dist
+
+Objetivo:
+Ajustar os arquivos do projeto para que, quando eu mandar para o GitHub e fizer deploy na Vercel, a Vercel encontre corretamente a pasta dist e publique a página sem erro.
+
+Faça exatamente isto:
+
+1. Verifique a estrutura do projeto
+
+Confirme se a página principal realmente está em:
+artifacts/pagina-de-vendas
+
+Dentro dessa pasta devem existir:
+package.json
+index.html
+src
+vite.vercel.config.ts
+dist após o build
+
+2. Ajuste o vercel.json
+
+Quero que o deploy funcione usando a raiz do repositório no GitHub.
+
+Então crie ou ajuste o arquivo vercel.json na raiz do repositório com esta configuração:
+
+{
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm --dir artifacts/pagina-de-vendas run build:vercel",
+  "outputDirectory": "artifacts/pagina-de-vendas/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
+Importante:
+O outputDirectory precisa apontar para:
+artifacts/pagina-de-vendas/dist
+
+Não deixe somente "dist", porque a Vercel está procurando na raiz errada.
+
+3. Confirme o package.json da página
+
+Abra:
+artifacts/pagina-de-vendas/package.json
+
+Confirme se existe o script:
+"build:vercel"
+
+Ele deve rodar:
+vite build --config vite.vercel.config.ts
+
+Se não existir, adicione corretamente.
+
+4. Rode os comandos de teste
+
+Na raiz do projeto, rode:
+
+pnpm install --no-frozen-lockfile
+
+Depois rode:
+
+pnpm --dir artifacts/pagina-de-vendas run build:vercel
+
+Confirme que o build gera a pasta:
+
+artifacts/pagina-de-vendas/dist
+
+5. Não mexa na página
+
+Não altere:
+visual
+copy
+layout
+cores
+imagens
+botões
+links de checkout
+UTMs
+estrutura da página
+
+O objetivo é somente corrigir configuração de deploy.
+
+6. Faça commit e push para o GitHub
+
+Depois de corrigir, rode:
+
+git status
+
+Depois:
+
+git add .
+git commit -m "fix vercel output directory"
+git push origin main
+
+7. Confirme o commit
+
+Depois rode:
+
+git log --oneline -5
+
+Me diga qual foi o novo commit enviado para o GitHub.
+
+8. No final, me entregue exatamente estas informações:
+
+Deploy corrigido: sim ou não
+Build passou: sim ou não
+Pasta dist gerada em: 
+Arquivo vercel.json está em:
+Install Command:
+Build Command:
+Output Directory:
+Novo commit:
+Pronto para clicar em Redeploy na Vercel: sim ou não
+
+Atenção:
+Não quero que você apenas diga o que fazer.
+Quero que você execute os ajustes, teste o build, faça commit e envie para o GitHub.

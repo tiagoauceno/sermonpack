@@ -1,6 +1,6 @@
 {
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "pnpm --filter @workspace/pagina-de-vendas run build:vercel",
+  "buildCommand": "pnpm --dir artifacts/pagina-de-vendas run build:vercel",
   "outputDirectory": "artifacts/pagina-de-vendas/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
