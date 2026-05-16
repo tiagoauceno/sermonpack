@@ -44,7 +44,10 @@ export default function PricingSection() {
             <img
               src="https://i.imgur.com/pshYprB.png"
               alt="500 Sermon Outlines Pack"
+              width={320}
+              height={320}
               className="w-full max-w-xs h-auto rounded-md shadow-lg"
+              style={{ aspectRatio: "1 / 1" }}
               data-testid="img-pricing-preview"
               loading="lazy"
               decoding="async"

@@ -71,6 +71,8 @@ export default function ContentSection() {
               <img
                 src={productImage}
                 alt="500 Sermon Outlines for Women"
+                width={1080}
+                height={1080}
                 className="max-w-full h-auto rounded-md"
                 data-testid="img-product-preview"
                 loading="lazy"

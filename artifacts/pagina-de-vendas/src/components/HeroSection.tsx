@@ -44,17 +44,22 @@ export default function HeroSection() {
 
             <div className="flex justify-center">
               <div className="relative" style={{ width: "185px" }}>
-                <div className="overflow-hidden rounded-2xl shadow-[0_20px_40px_-8px_rgba(0,0,0,0.35)]">
+                <div
+                  className="overflow-hidden rounded-2xl shadow-[0_20px_40px_-8px_rgba(0,0,0,0.35)]"
+                  style={{ height: "277px" }}
+                >
                   <div
-                    className="flex transition-transform duration-500 ease-in-out"
+                    className="flex h-full transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${current * 100}%)` }}
                   >
                     {slides.map((slide, i) => (
-                      <div key={i} className="min-w-full">
+                      <div key={i} className="min-w-full h-full flex items-center justify-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-auto block"
+                          width={i === 0 ? 1318 : 1240}
+                          height={i === 0 ? 1976 : 1755}
+                          className="w-full h-full object-contain block"
                           data-testid={`img-hero-slide-${i}`}
                           loading={i === 0 ? "eager" : "lazy"}
                           fetchPriority={i === 0 ? "high" : "low"}
