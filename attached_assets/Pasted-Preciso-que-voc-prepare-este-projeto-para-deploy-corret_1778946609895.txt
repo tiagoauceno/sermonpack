@@ -1,0 +1,57 @@
+Preciso que você prepare este projeto para deploy correto na Vercel, sem alterar o visual, a copy, os botões ou a lógica da página.
+
+Faça uma revisão completa da estrutura do projeto e ajuste tudo que for necessário para a Vercel conseguir fazer o build corretamente.
+
+Objetivo:
+A página precisa funcionar perfeitamente na Vercel, carregando rápido, sem erro de build, sem tela branca, sem erro 404 e mantendo todos os links, botões e UTMs funcionando.
+
+Tarefas obrigatórias:
+
+1. Verifique qual é a pasta principal real do projeto.
+Confirme onde estão o package.json, index.html, src, vite.config e os arquivos principais da página.
+
+2. Ajuste o package.json.
+Garanta que existam estes scripts:
+dev
+build
+preview
+
+O build precisa funcionar com:
+pnpm run build
+
+3. Verifique se o projeto usa Vite, React ou outro framework.
+Configure corretamente para deploy na Vercel.
+
+4. Crie ou ajuste o arquivo vercel.json na raiz correta do projeto.
+Use uma configuração compatível com SPA, para evitar erro 404 em rotas internas.
+
+5. Garanta que o output do build seja a pasta correta.
+Se for Vite, o output deve ser dist.
+
+6. Rode o build localmente no Replit.
+Execute:
+pnpm install
+pnpm run build
+
+Se der erro, corrija até o build finalizar com sucesso.
+
+7. Otimize a página para carregar mais rápido na Vercel.
+Sem mudar o design, reduza problemas óbvios como imagens muito pesadas, imports desnecessários, assets quebrados ou arquivos que estejam atrasando o carregamento.
+
+8. Verifique todos os botões de CTA.
+Todos precisam continuar levando para o checkout correto.
+A lógica de passar UTMs para o checkout precisa continuar funcionando.
+
+9. Não remova nenhuma seção da página.
+Não reescreva a copy.
+Não mude cores, layout, imagens ou estrutura visual sem necessidade.
+
+10. Depois de finalizar, me diga exatamente:
+- qual pasta deve ser usada como Root Directory na Vercel
+- qual Install Command usar
+- qual Build Command usar
+- qual Output Directory usar
+- se o build passou com sucesso
+- quais arquivos foram alterados
+
+Quero o projeto pronto para subir na Vercel via GitHub.
