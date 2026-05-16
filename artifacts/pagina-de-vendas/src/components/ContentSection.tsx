@@ -73,6 +73,8 @@ export default function ContentSection() {
                 alt="500 Sermon Outlines for Women"
                 className="max-w-full h-auto rounded-md"
                 data-testid="img-product-preview"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

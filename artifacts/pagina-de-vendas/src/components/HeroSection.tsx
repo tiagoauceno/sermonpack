@@ -56,6 +56,9 @@ export default function HeroSection() {
                           alt={slide.alt}
                           className="w-full h-auto block"
                           data-testid={`img-hero-slide-${i}`}
+                          loading={i === 0 ? "eager" : "lazy"}
+                          fetchPriority={i === 0 ? "high" : "low"}
+                          decoding={i === 0 ? "sync" : "async"}
                         />
                       </div>
                     ))}

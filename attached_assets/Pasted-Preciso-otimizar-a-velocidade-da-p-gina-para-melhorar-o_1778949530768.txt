@@ -1,0 +1,81 @@
+Preciso otimizar a velocidade da página para melhorar o PageSpeed no celular, sem alterar o visual, a copy, os botões, links, UTMs ou estrutura da página.
+
+A página já está publicada na Vercel, mas o PageSpeed deu:
+
+Performance: 62
+FCP: 2.6s
+LCP: 6.6s
+TBT: 360ms
+Speed Index: 4.5s
+CLS: 0.001
+
+Objetivo:
+Melhorar principalmente o LCP, FCP, Speed Index e Total Blocking Time.
+
+Faça exatamente:
+
+1. Identifique qual imagem ou elemento está causando o Largest Contentful Paint.
+Provavelmente é a imagem principal acima da dobra ou mockup/banner do topo.
+
+2. Otimize as imagens sem mudar o visual.
+Reduza peso das imagens grandes.
+Mantenha formato WebP ou AVIF.
+Garanta dimensões corretas.
+Evite carregar imagem maior do que o tamanho exibido.
+Não troque o design da imagem.
+
+3. Faça preload da imagem principal acima da dobra.
+Se houver uma imagem hero principal, adicione preload no index.html ou no componente correto.
+
+4. Garanta que a imagem principal carregue com prioridade.
+Use fetchpriority="high" quando fizer sentido.
+Não use lazy loading na imagem principal acima da dobra.
+
+5. Aplique lazy loading nas imagens abaixo da primeira dobra.
+Imagens de carrossel, bônus, mockups secundários e seções inferiores devem carregar depois.
+
+6. Remova imports, componentes ou scripts que não estejam sendo usados.
+Não remova nada que afete visual, botões, links, checkout ou UTMs.
+
+7. Reduza JavaScript desnecessário.
+Verifique se existem bibliotecas pesadas sem uso.
+Se houver animações pesadas no topo, suavize sem alterar o visual final.
+
+8. Verifique CSS pesado.
+Remova CSS não usado se for seguro.
+Não altere aparência da página.
+
+9. Confirme que os botões continuam funcionando.
+Todos os CTAs precisam continuar levando para o checkout correto.
+A passagem de UTMs precisa continuar funcionando.
+
+10. Rode o build:
+pnpm run build
+
+11. Confirme que a pasta dist é gerada corretamente na raiz para a Vercel.
+
+12. Faça commit e push:
+git add .
+git commit -m "optimize page speed for mobile"
+git push origin main
+
+13. No final, me informe:
+- quais imagens foram otimizadas
+- qual imagem era o LCP
+- se adicionou preload
+- se aplicou lazy loading
+- se removeu código não usado
+- se o build passou
+- qual commit foi enviado
+- se está pronto para redeploy na Vercel
+
+Importante:
+Não alterar copy.
+Não alterar layout.
+Não alterar cores.
+Não alterar imagens visualmente.
+Não alterar botões.
+Não alterar links.
+Não alterar UTMs.
+Não alterar a oferta.
+O objetivo é apenas melhorar velocidade e PageSpeed.

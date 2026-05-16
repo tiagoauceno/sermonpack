@@ -46,6 +46,8 @@ export default function PricingSection() {
               alt="500 Sermon Outlines Pack"
               className="w-full max-w-xs h-auto rounded-md shadow-lg"
               data-testid="img-pricing-preview"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
